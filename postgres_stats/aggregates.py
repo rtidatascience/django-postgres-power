@@ -54,7 +54,7 @@ class Percentile(Aggregate):
         else:
             extra['function'] = 'PERCENTILE_DISC'
 
-        if six.PY2:
-            super(Percentile, self).__init__(expression, percentiles=percentiles, **extra)
-        else:
+        if six.PY3:
             super().__init__(expression, percentiles=percentiles, **extra)
+        else:
+            super(Percentile, self).__init__(expression, percentiles=percentiles, **extra)

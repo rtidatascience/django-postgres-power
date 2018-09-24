@@ -100,9 +100,7 @@ class Extract(Func):
     template = "%(function)s(%(subfield)s FROM %(expressions)s)"
 
     def __init__(self, expression, subfield, **extra):
-        if six.PY2:
-            super(Extract, self).__init__(expression, subfield=subfield, **extra)
-        else:
+        if six.PY3:
             super().__init__(expression, subfield=subfield, **extra)
-
-
+        else:
+            super(Extract, self).__init__(expression, subfield=subfield, **extra)
