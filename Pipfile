@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+psycopg2-binary = "*"
+six = "*"
+
+[dev-packages]
+pbr = "*"
+autopep8 = "*"
+Sphinx = "*"
+sphinx-autobuild = "*"
+django-nose = "*"
